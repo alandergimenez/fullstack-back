@@ -1,2 +1,2 @@
-# fullstack-back
-Backend
+# python
+ Ejercicio de python
