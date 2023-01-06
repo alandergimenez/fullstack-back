@@ -1,11 +1,11 @@
-""" Mi App en Python """ 
+""" Mi App en Python """
 
 from flask import Flask, request, redirect
 import persistencia
 
 app = Flask(__name__)
 
-@app.route( "/pizza", methods=['POST'] )
+@app.route("/pizza", methods=['POST'])
 def pizza():
     """ Guarda pedido """
     nombre    = request.form.get("nombre")
