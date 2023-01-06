@@ -6,6 +6,6 @@ with open("pedidos.txt", "w", encoding="utf-8") as file:
 
 def guardar_pedido(nombre, apellidos):
     """ Función Guarda pedido """
-    datos = open("pedidos.txt", "a",  encoding="utf-8",)
-    datos.write("-" + nombre + " " + apellidos + "\n")
-    datos.close()
+    with open("pedidos.txt", "a",  encoding="utf-8",) as file:
+    file.write("-" + nombre + " " + apellidos + "\n")
+    file.close()
