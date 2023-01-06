@@ -11,7 +11,7 @@ def pizza():
     nombre    = request.form.get("nombre")
     apellidos = request.form.get("apellidos")
     persistencia.guardar_pedido(nombre, apellidos)
-    print(nombre)    
+    print(nombre)
     print(apellidos)
     return redirect("http://localhost/html/solicita_pedido.html", code=302)
 app.run()

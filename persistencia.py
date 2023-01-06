@@ -1,6 +1,5 @@
 """ Guarda pedidos en archivo txt """
 
-# Limpia el registro del fichero pedidos.txt
 with open("pedidos.txt", "w", encoding="utf-8") as file:
     file.write("")
     file.close()
@@ -8,5 +7,5 @@ with open("pedidos.txt", "w", encoding="utf-8") as file:
 def guardar_pedido(nombre, apellidos):
     """ Función Guarda pedido """
     file = open("pedidos.txt", "a",  encoding="utf-8",)
-    file.write(nombre + " " + apellidos + "\n")
+    file.write("-" + nombre + " " + apellidos + "\n")
     file.close()
