@@ -16,9 +16,9 @@ def pizza():
     return redirect("http://localhost/html/solicita_pedido.html", code=302)
 
 
-@app.route("/checksize", methods=['POST']) 
-def checksize():  
-    """  Comprueba disponibilidad de un tamaño de pizza.  """     
+@app.route("/checksize", methods=['POST'])
+def checksize():
+    """  Comprueba disponibilidad de un tamaño de pizza.  """
 
     tamano  = request.form.get("tamano")
 
@@ -26,14 +26,14 @@ def checksize():
 
     if tamano == "S":
         mensaje = "No disponsible"
-        return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'}) 
+        return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'})
 
     elif tamano == "N":
         mensaje = ""
-        return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'}) 
+        return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'})
 
     else:
         mensaje = "Disponsible"
-        return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'}) 
+        return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'})
 
 app.run()
