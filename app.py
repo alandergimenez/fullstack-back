@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/pizza", methods=['POST'])
 def pizza():
     """ Guarda pedido """
-    nombre    = request.form.get("nombre")
+    nombre = request.form.get("nombre")
     apellidos = request.form.get("apellidos")
     persistencia.guardar_pedido(nombre, apellidos)
     print(nombre)
@@ -20,9 +20,7 @@ def pizza():
 def checksize():
     """  Comprueba disponibilidad de un tamaño de pizza.  """
 
-    tamano  = request.form.get("tamano")
-
-    print(tamano)
+    tamano = request.form.get("tamano")
 
     if tamano == "S":
         mensaje = "No disponsible"
@@ -32,7 +30,7 @@ def checksize():
 
     else:
         mensaje = "Disponsible"
-        
+
     return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'})
 
 app.run()
